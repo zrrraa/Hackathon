@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c74ddfe1d419d3085daf39f8dae14ee8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c74ddfe1d419d3085daf39f8dae14ee8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c74ddfe1d419d3085daf39f8dae14ee8 = L.map(
+                "map_c74ddfe1d419d3085daf39f8dae14ee8",
+                {
+                    center: [35.0, 105.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2021ac2e30a9b6d8dbb41e3ef995430e = L.tileLayer(
+                "https://webst02.is.autonavi.com/appmaptile?style=6\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "\u9ad8\u5fb7-\u536b\u661f\u5f71\u50cf\u56fe", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c74ddfe1d419d3085daf39f8dae14ee8);
+        
+    
+            var marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6 = L.markerClusterGroup(
+                {}
+            );
+            map_c74ddfe1d419d3085daf39f8dae14ee8.addLayer(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+            var marker_643d21be7eb0b081abb4c1be1338ba1a = L.marker(
+                [31.62, 117.38],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_26d41c607a2929fd1e4188b5af1caf6d = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_dbe33fca00ef6edd249b8df8c37af458 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuW3oua5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5bei5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTcuMzjluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMzEuNjLluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMiw4MDDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_26d41c607a2929fd1e4188b5af1caf6d.setContent(i_frame_dbe33fca00ef6edd249b8df8c37af458);
+            
+        
+
+        marker_643d21be7eb0b081abb4c1be1338ba1a.bindPopup(popup_26d41c607a2929fd1e4188b5af1caf6d)
+        ;
+
+        
+    
+    
+            marker_643d21be7eb0b081abb4c1be1338ba1a.bindTooltip(
+                `<div>
+                     巢湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c6d46e18d3d363fcb531a1357d772aa = L.marker(
+                [29.46, 112.95],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_8e110944fafa6c7a5355e271be1ca8cd = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_90ae0e1f2758775a2112640b70e80c0e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPua0nuW6rea5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5rSe5bqt5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTIuOTXluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjkuNDbluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMiw2ODDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_8e110944fafa6c7a5355e271be1ca8cd.setContent(i_frame_90ae0e1f2758775a2112640b70e80c0e);
+            
+        
+
+        marker_4c6d46e18d3d363fcb531a1357d772aa.bindPopup(popup_8e110944fafa6c7a5355e271be1ca8cd)
+        ;
+
+        
+    
+    
+            marker_4c6d46e18d3d363fcb531a1357d772aa.bindTooltip(
+                `<div>
+                     洞庭湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a5b5b485192b3af1dd6952a4e2bff3f1 = L.marker(
+                [29.71, 116.0],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_b8ab42d8168c35b8269fc76dd6bf1402 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_7d6bd3bb221bc223776eb2b26fb008ed = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumEsemYs+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6YSx6Ziz5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTYuMOW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJoyOS43MeW6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJozLDUwMOW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_b8ab42d8168c35b8269fc76dd6bf1402.setContent(i_frame_7d6bd3bb221bc223776eb2b26fb008ed);
+            
+        
+
+        marker_a5b5b485192b3af1dd6952a4e2bff3f1.bindPopup(popup_b8ab42d8168c35b8269fc76dd6bf1402)
+        ;
+
+        
+    
+    
+            marker_a5b5b485192b3af1dd6952a4e2bff3f1.bindTooltip(
+                `<div>
+                     鄱阳湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a6be185a0644743c9765c6e9bee036a = L.marker(
+                [31.16, 120.13],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_209e2f3bef385ae57427bbb0bc5b0b54 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_fc8bb8775e6419ce1e530472aecdd9a3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWkqua5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5aSq5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjAuMTPluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMzEuMTbluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMiwyNTDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5Lqa54Ot5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_209e2f3bef385ae57427bbb0bc5b0b54.setContent(i_frame_fc8bb8775e6419ce1e530472aecdd9a3);
+            
+        
+
+        marker_8a6be185a0644743c9765c6e9bee036a.bindPopup(popup_209e2f3bef385ae57427bbb0bc5b0b54)
+        ;
+
+        
+    
+    
+            marker_8a6be185a0644743c9765c6e9bee036a.bindTooltip(
+                `<div>
+                     太湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_20499a814a80c1c6372c846a61afe5c3 = L.marker(
+                [30.24, 120.14],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_84b273eb7c8e3b06c80d972d447a08a7 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_86e897ee6030a16196214bad8c9dfb94 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuilv+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6KW/5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjAuMTTluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMzAuMjTluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaNi4zOeW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_84b273eb7c8e3b06c80d972d447a08a7.setContent(i_frame_86e897ee6030a16196214bad8c9dfb94);
+            
+        
+
+        marker_20499a814a80c1c6372c846a61afe5c3.bindPopup(popup_84b273eb7c8e3b06c80d972d447a08a7)
+        ;
+
+        
+    
+    
+            marker_20499a814a80c1c6372c846a61afe5c3.bindTooltip(
+                `<div>
+                     西湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_032722236aa250901725146b521c865e = L.marker(
+                [24.48, 102.68],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_96fd6421ff9dbbd743262f44996cdfec = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_eab4f7a1a49f9fbd082f7422acb2a706 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPua7h+axoDwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5ruH5rGgPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMDIuNjjluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjQuNDjluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaNzEuNjflubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5Lqa54Ot5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_96fd6421ff9dbbd743262f44996cdfec.setContent(i_frame_eab4f7a1a49f9fbd082f7422acb2a706);
+            
+        
+
+        marker_032722236aa250901725146b521c865e.bindPopup(popup_96fd6421ff9dbbd743262f44996cdfec)
+        ;
+
+        
+    
+    
+            marker_032722236aa250901725146b521c865e.bindTooltip(
+                `<div>
+                     滇池
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c5e58d6765c9e375ee18acd712d44ba = L.marker(
+                [36.73, 99.94],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_45b5be2717b3217adf9a6dff7ffddd4a = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_3dd739dded4aeafd8982c92ebb988cfb = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumdkua1t+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6Z2S5rW35rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJo5OS45NOW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJozNi43M+W6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJo0LDMxN+W5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrpq5jljp/lraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_45b5be2717b3217adf9a6dff7ffddd4a.setContent(i_frame_3dd739dded4aeafd8982c92ebb988cfb);
+            
+        
+
+        marker_2c5e58d6765c9e375ee18acd712d44ba.bindPopup(popup_45b5be2717b3217adf9a6dff7ffddd4a)
+        ;
+
+        
+    
+    
+            marker_2c5e58d6765c9e375ee18acd712d44ba.bindTooltip(
+                `<div>
+                     青海湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5edb4a6490e41d2313eadfbddb098e71 = L.marker(
+                [33.46, 118.8],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_9d172f671a1aecac09866fa710c2ea1d = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_3234ebede4d6f7b9fb1bfe1d6a747231 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPua0quazvea5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5rSq5rO95rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTguOOW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJozMy40NuW6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJoxLDM2OOW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_9d172f671a1aecac09866fa710c2ea1d.setContent(i_frame_3234ebede4d6f7b9fb1bfe1d6a747231);
+            
+        
+
+        marker_5edb4a6490e41d2313eadfbddb098e71.bindPopup(popup_9d172f671a1aecac09866fa710c2ea1d)
+        ;
+
+        
+    
+    
+            marker_5edb4a6490e41d2313eadfbddb098e71.bindTooltip(
+                `<div>
+                     洪泽湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d334706dcf57c03686eff82ea4dc78ec = L.marker(
+                [34.57, 105.95],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_3b08bfb11e60bacb851ccf20b87b893f = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_6f20220ba0ca74607e669f5f1a20a5f4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPum6puenr+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6bqm56ev5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMDUuOTXluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMzQuNTfluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMjMuNeW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_3b08bfb11e60bacb851ccf20b87b893f.setContent(i_frame_6f20220ba0ca74607e669f5f1a20a5f4);
+            
+        
+
+        marker_d334706dcf57c03686eff82ea4dc78ec.bindPopup(popup_3b08bfb11e60bacb851ccf20b87b893f)
+        ;
+
+        
+    
+    
+            marker_d334706dcf57c03686eff82ea4dc78ec.bindTooltip(
+                `<div>
+                     麦积湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_56d5349a2769015c404620eeeb4dd184 = L.marker(
+                [29.81, 113.46],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_3f816ae4a608b2e63f2a2f5c4eb94aa1 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_bf795638d7da18c4d7b2ffaa9516da41 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPua0qua5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5rSq5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTMuNDbluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjkuODHluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMiw0NTDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5Lqa54Ot5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_3f816ae4a608b2e63f2a2f5c4eb94aa1.setContent(i_frame_bf795638d7da18c4d7b2ffaa9516da41);
+            
+        
+
+        marker_56d5349a2769015c404620eeeb4dd184.bindPopup(popup_3f816ae4a608b2e63f2a2f5c4eb94aa1)
+        ;
+
+        
+    
+    
+            marker_56d5349a2769015c404620eeeb4dd184.bindTooltip(
+                `<div>
+                     洪湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d125e3962b6599dec05e4b2571703573 = L.marker(
+                [45.69, 126.66],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_f9aabe566eeb2b413bfdb6f98a7eba2d = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_9ed27e76be8d6e0ca5d6a482aaea2def = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPum7kem+mea9rTwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6buR6b6Z5r2tPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjYuNjbluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNDUuNjnluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC40MuW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrlr5LmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_f9aabe566eeb2b413bfdb6f98a7eba2d.setContent(i_frame_9ed27e76be8d6e0ca5d6a482aaea2def);
+            
+        
+
+        marker_d125e3962b6599dec05e4b2571703573.bindPopup(popup_f9aabe566eeb2b413bfdb6f98a7eba2d)
+        ;
+
+        
+    
+    
+            marker_d125e3962b6599dec05e4b2571703573.bindTooltip(
+                `<div>
+                     黑龙潭
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa2f9f369686073054dae59740cc5940 = L.marker(
+                [43.79, 87.62],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_0de371e6b0bf2f08ae1ccbc08148aa5b = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_ed39a4174987cff58e26d6af2fc86583 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuS5jOmygeacqOm9kOW4gua5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5LmM6bKB5pyo6b2Q5biC5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJo4Ny42MuW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJo0My43OeW6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJowLjA25bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8mua4qeW4puW5suaXseawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_0de371e6b0bf2f08ae1ccbc08148aa5b.setContent(i_frame_ed39a4174987cff58e26d6af2fc86583);
+            
+        
+
+        marker_fa2f9f369686073054dae59740cc5940.bindPopup(popup_0de371e6b0bf2f08ae1ccbc08148aa5b)
+        ;
+
+        
+    
+    
+            marker_fa2f9f369686073054dae59740cc5940.bindTooltip(
+                `<div>
+                     乌鲁木齐市湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1fe5431d3abdc5e7be9c73840f79b117 = L.marker(
+                [24.97, 121.41],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_9385332e40e88287e7d8c1897dcf30a4 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_2f27bd7329348f09751e5846cf9bb688 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumdkum+mea9rTwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6Z2S6b6Z5r2tPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjEuNDHluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjQuOTfluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC40MeW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_9385332e40e88287e7d8c1897dcf30a4.setContent(i_frame_2f27bd7329348f09751e5846cf9bb688);
+            
+        
+
+        marker_1fe5431d3abdc5e7be9c73840f79b117.bindPopup(popup_9385332e40e88287e7d8c1897dcf30a4)
+        ;
+
+        
+    
+    
+            marker_1fe5431d3abdc5e7be9c73840f79b117.bindTooltip(
+                `<div>
+                     青龙潭
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b6c45043e357a332dfbeca2132f5799 = L.marker(
+                [29.64, 88.54],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_1d3dacaefaea0e1a83bf0d52d239f5ae = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_bace444a1d2e13853613d8e6da656ca6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuS9qeaer+aOqjwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5L2p5p6v5o6qPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJo4OC41NOW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJoyOS42NOW6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJozLjPlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya6auY5Y6f5a2j6aOO5rCU5YCZPC9wPgogICAgPGJyPjxhIGhyZWY9IkY6XEhhY2thdGhvblxkYXRhXGxha2VfbW9yZWFib3V0XHBlaWt1Y3VvLmh0bWwiIHRhcmdldD0iX2JsYW5rIj7mm7TlpJrkv6Hmga88L2E+CiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_1d3dacaefaea0e1a83bf0d52d239f5ae.setContent(i_frame_bace444a1d2e13853613d8e6da656ca6);
+            
+        
+
+        marker_2b6c45043e357a332dfbeca2132f5799.bindPopup(popup_1d3dacaefaea0e1a83bf0d52d239f5ae)
+        ;
+
+        
+    
+    
+            marker_2b6c45043e357a332dfbeca2132f5799.bindTooltip(
+                `<div>
+                     佩枯措
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f6347498741d6769a75bfcf8d736f1e9 = L.marker(
+                [29.56, 118.93],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_cdc281527b59f67110e97847ce207f79 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_f582bb97bfac4995619b71deac0cd669 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWNg+Wym+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5Y2D5bKb5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTguOTPluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjkuNTbluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaNTcz5bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8muS6mueDreW4puWto+mjjuawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_cdc281527b59f67110e97847ce207f79.setContent(i_frame_f582bb97bfac4995619b71deac0cd669);
+            
+        
+
+        marker_f6347498741d6769a75bfcf8d736f1e9.bindPopup(popup_cdc281527b59f67110e97847ce207f79)
+        ;
+
+        
+    
+    
+            marker_f6347498741d6769a75bfcf8d736f1e9.bindTooltip(
+                `<div>
+                     千岛湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6ba9538ccb45fa4e8db1656740085d3 = L.marker(
+                [27.99, 120.62],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_72a947782fd49fcf31442378a0779d4f = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_4e83a03073893dc54ed1e3987876f54c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPueTr+axn+WPo+a1t+WfnzwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+55Ov5rGf5Y+j5rW35Z+fPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjAuNjLluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjcuOTnluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMSw1MDDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5Lqa54Ot5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_72a947782fd49fcf31442378a0779d4f.setContent(i_frame_4e83a03073893dc54ed1e3987876f54c);
+            
+        
+
+        marker_e6ba9538ccb45fa4e8db1656740085d3.bindPopup(popup_72a947782fd49fcf31442378a0779d4f)
+        ;
+
+        
+    
+    
+            marker_e6ba9538ccb45fa4e8db1656740085d3.bindTooltip(
+                `<div>
+                     瓯江口海域
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3357d2f55cfd137e522c2e7bf49418ac = L.marker(
+                [36.61, 110.78],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_3bcde7807f377be4ddd77a0c72fe939a = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_95cb805bdac4f2bd651235ae26f35839 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPum7hOays+W5sua1geWyqemUheWzoeKAlOKAlOm7keWxseWzoeautTwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6buE5rKz5bmy5rWB5bKp6ZSF5bOh4oCU4oCU6buR5bGx5bOh5q61PC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTAuNzjluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMzYuNjHluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMjjlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_3bcde7807f377be4ddd77a0c72fe939a.setContent(i_frame_95cb805bdac4f2bd651235ae26f35839);
+            
+        
+
+        marker_3357d2f55cfd137e522c2e7bf49418ac.bindPopup(popup_3bcde7807f377be4ddd77a0c72fe939a)
+        ;
+
+        
+    
+    
+            marker_3357d2f55cfd137e522c2e7bf49418ac.bindTooltip(
+                `<div>
+                     黄河干流岩锅峡——黑山峡段
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a7a46f2c9443fd5ca30b640866a71d1e = L.marker(
+                [24.52, 118.1],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_b61d8bb46f847532a8b5f9931e0ecd0c = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_afe0bae47787cca9b4a47e8ac08f32d8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWOpumXqOa1t+WfnzwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5Y6m6Zeo5rW35Z+fPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTguMeW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJoyNC41MuW6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJoyMDDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5Lqa54Ot5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_b61d8bb46f847532a8b5f9931e0ecd0c.setContent(i_frame_afe0bae47787cca9b4a47e8ac08f32d8);
+            
+        
+
+        marker_a7a46f2c9443fd5ca30b640866a71d1e.bindPopup(popup_b61d8bb46f847532a8b5f9931e0ecd0c)
+        ;
+
+        
+    
+    
+            marker_a7a46f2c9443fd5ca30b640866a71d1e.bindTooltip(
+                `<div>
+                     厦门海域
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9222ec4240e0fd75690c7387a41354d5 = L.marker(
+                [28.08, 120.91],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_3897c05fbed5d9c98a7a12c2575d7cef = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_9088c918fb9f8a8633aab581c1f20e1e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuS5kOa4hea5vjwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5LmQ5riF5rm+PC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjAuOTHluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjguMDjluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaNzXlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5Lqa54Ot5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_3897c05fbed5d9c98a7a12c2575d7cef.setContent(i_frame_9088c918fb9f8a8633aab581c1f20e1e);
+            
+        
+
+        marker_9222ec4240e0fd75690c7387a41354d5.bindPopup(popup_3897c05fbed5d9c98a7a12c2575d7cef)
+        ;
+
+        
+    
+    
+            marker_9222ec4240e0fd75690c7387a41354d5.bindTooltip(
+                `<div>
+                     乐清湾
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c5c5ef611494c3ae2fcd74db3b3f3402 = L.marker(
+                [38.83, 117.66],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_244048f23af5934b895c1ef64663e6c3 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_4d8d831a3bba6b552adf5e4bcc0ac87f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWkqea0pei/keWyuOa1t+WfnzwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5aSp5rSl6L+R5bK45rW35Z+fPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTcuNjbluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMzguODPluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMzAw5bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8mua4qeW4puWto+mjjuawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_244048f23af5934b895c1ef64663e6c3.setContent(i_frame_4d8d831a3bba6b552adf5e4bcc0ac87f);
+            
+        
+
+        marker_c5c5ef611494c3ae2fcd74db3b3f3402.bindPopup(popup_244048f23af5934b895c1ef64663e6c3)
+        ;
+
+        
+    
+    
+            marker_c5c5ef611494c3ae2fcd74db3b3f3402.bindTooltip(
+                `<div>
+                     天津近岸海域
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_776c20d7af03cc7581b1669d99a5cf23 = L.marker(
+                [25.85, 119.72],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_327c3d3d790592eee21ee5ba61d7d444 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_d93d7f23c5eda265e72378d66c3209d1 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumXveaxn+WPo+WPiumZhOi/kea1t+WfnzwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6Ze95rGf5Y+j5Y+K6ZmE6L+R5rW35Z+fPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTkuNzLluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjUuODXluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaNDAw5bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8muS6mueDreW4puWto+mjjuawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_327c3d3d790592eee21ee5ba61d7d444.setContent(i_frame_d93d7f23c5eda265e72378d66c3209d1);
+            
+        
+
+        marker_776c20d7af03cc7581b1669d99a5cf23.bindPopup(popup_327c3d3d790592eee21ee5ba61d7d444)
+        ;
+
+        
+    
+    
+            marker_776c20d7af03cc7581b1669d99a5cf23.bindTooltip(
+                `<div>
+                     闽江口及附近海域
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0fa37c004eb96e6d0f7d6f0ea0846e93 = L.marker(
+                [22.45, 113.52],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_d270d38712b49aad91d4ca7284bf2f57 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_e2e2518537a567c0354a5c2c1cf4c43b = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWNl+acl+awtOWfnzwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5Y2X5pyX5rC05Z+fPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTMuNTLluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjIuNDXluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMuW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_d270d38712b49aad91d4ca7284bf2f57.setContent(i_frame_e2e2518537a567c0354a5c2c1cf4c43b);
+            
+        
+
+        marker_0fa37c004eb96e6d0f7d6f0ea0846e93.bindPopup(popup_d270d38712b49aad91d4ca7284bf2f57)
+        ;
+
+        
+    
+    
+            marker_0fa37c004eb96e6d0f7d6f0ea0846e93.bindTooltip(
+                `<div>
+                     南朗水域
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4afc33970a8c06de4560d2d9a6b84ef4 = L.marker(
+                [49.11, 119.66],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_6561978c5a82a2d64c7cfd6f845458ab = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_b1260dabe41804e92b447119c0098d3c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWRvOS8pua5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5ZG85Lym5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTkuNjbluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNDkuMTHluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMiwzMznlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5a+S5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_6561978c5a82a2d64c7cfd6f845458ab.setContent(i_frame_b1260dabe41804e92b447119c0098d3c);
+            
+        
+
+        marker_4afc33970a8c06de4560d2d9a6b84ef4.bindPopup(popup_6561978c5a82a2d64c7cfd6f845458ab)
+        ;
+
+        
+    
+    
+            marker_4afc33970a8c06de4560d2d9a6b84ef4.bindTooltip(
+                `<div>
+                     呼伦湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_659c51059a1ff2f46244deb4e30a0111 = L.marker(
+                [29.97, 118.33],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_262ef113bfcf1c524d800195717d2dc7 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_e5ceff4b391a9fce98e9df4fd637c2d7 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumVv+axn+Wkqem5hea0suaVhemBkzwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6ZW/5rGf5aSp6bmF5rSy5pWF6YGTPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTguMzPluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjkuOTfluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMTU05bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8muS6mueDreW4puWto+mjjuawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_262ef113bfcf1c524d800195717d2dc7.setContent(i_frame_e5ceff4b391a9fce98e9df4fd637c2d7);
+            
+        
+
+        marker_659c51059a1ff2f46244deb4e30a0111.bindPopup(popup_262ef113bfcf1c524d800195717d2dc7)
+        ;
+
+        
+    
+    
+            marker_659c51059a1ff2f46244deb4e30a0111.bindTooltip(
+                `<div>
+                     长江天鹅洲故道
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f3fdc6c8da60efcb18c480c2b2b8ce4 = L.marker(
+                [50.83, 126.77],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_914dd727071e9720d9166f45f3587d50 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_f929fe764d338ea0ad90482c158b5d75 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPui0neWwlOa5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6LSd5bCU5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjYuNzfluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNTAuODPluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMSwxNjDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5a+S5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_914dd727071e9720d9166f45f3587d50.setContent(i_frame_f929fe764d338ea0ad90482c158b5d75);
+            
+        
+
+        marker_2f3fdc6c8da60efcb18c480c2b2b8ce4.bindPopup(popup_914dd727071e9720d9166f45f3587d50)
+        ;
+
+        
+    
+    
+            marker_2f3fdc6c8da60efcb18c480c2b2b8ce4.bindTooltip(
+                `<div>
+                     贝尔湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f702f02fbf72c61a85d96fb1b21b72b3 = L.marker(
+                [51.53, 123.73],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_99b4342bf0cacca5f8c7409d30d41bd1 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_4583b7ec4980767e7f5588a161e2071e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWkp+WFtOWHr+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5aSn5YW05Yev5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjMuNzPluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNTEuNTPluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMiwzNDDlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5a+S5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_99b4342bf0cacca5f8c7409d30d41bd1.setContent(i_frame_4583b7ec4980767e7f5588a161e2071e);
+            
+        
+
+        marker_f702f02fbf72c61a85d96fb1b21b72b3.bindPopup(popup_99b4342bf0cacca5f8c7409d30d41bd1)
+        ;
+
+        
+    
+    
+            marker_f702f02fbf72c61a85d96fb1b21b72b3.bindTooltip(
+                `<div>
+                     大兴凯湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3e6f664ec3efee044f864c2e639de4c = L.marker(
+                [51.49, 123.6],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_d13146b233e2e2a5b496d24f26b6983b = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_f21cc02e0beccd0fbca306bbd33464a3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWwj+WFtOWHr+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5bCP5YW05Yev5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjMuNuW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJo1MS40OeW6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJo5NDLlubPmlrnlhazph4w8L3A+CiAgICAgICAgPHA+5rCU5YCZ77ya5a+S5rip5bim5a2j6aOO5rCU5YCZPC9wPgogICAgCiAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgICA=" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_d13146b233e2e2a5b496d24f26b6983b.setContent(i_frame_f21cc02e0beccd0fbca306bbd33464a3);
+            
+        
+
+        marker_d3e6f664ec3efee044f864c2e639de4c.bindPopup(popup_d13146b233e2e2a5b496d24f26b6983b)
+        ;
+
+        
+    
+    
+            marker_d3e6f664ec3efee044f864c2e639de4c.bindTooltip(
+                `<div>
+                     小兴凯湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1362085f075ff53c6188b99c3ffacf31 = L.marker(
+                [23.61, 113.13],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_b5559caa8ee4c940ad797d2698a79da2 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_5587ac17cdc901693df098cadb1b57ff = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPui/nueOr+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6L+e546v5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTMuMTPluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjMuNjHluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC4zM+W5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_b5559caa8ee4c940ad797d2698a79da2.setContent(i_frame_5587ac17cdc901693df098cadb1b57ff);
+            
+        
+
+        marker_1362085f075ff53c6188b99c3ffacf31.bindPopup(popup_b5559caa8ee4c940ad797d2698a79da2)
+        ;
+
+        
+    
+    
+            marker_1362085f075ff53c6188b99c3ffacf31.bindTooltip(
+                `<div>
+                     连环湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67794cb81f9c20988ce4fb1db1a03ad5 = L.marker(
+                [29.75, 116.05],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_6bfc0adcc1dc87af5fca91e472653eb7 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_7d51a3d7ad7eb0f62b41e38a00378f9f = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuiOsuiKsea5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6I6y6Iqx5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTYuMDXluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjkuNzXluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC4zNOW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_6bfc0adcc1dc87af5fca91e472653eb7.setContent(i_frame_7d51a3d7ad7eb0f62b41e38a00378f9f);
+            
+        
+
+        marker_67794cb81f9c20988ce4fb1db1a03ad5.bindPopup(popup_6bfc0adcc1dc87af5fca91e472653eb7)
+        ;
+
+        
+    
+    
+            marker_67794cb81f9c20988ce4fb1db1a03ad5.bindTooltip(
+                `<div>
+                     莲花湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79109ba85a3a0e6d13588a8bd189f8b8 = L.marker(
+                [45.37, 131.65],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_015b5a22bf0c079cc89fda89d6f15c91 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_7a942063d3ba99f77b58515ba65be54e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPui+vumHjOWKoOa5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6L6+6YeM5Yqg5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMzEuNjXluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNDUuMzfluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMS4xNeW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrlr5LmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_015b5a22bf0c079cc89fda89d6f15c91.setContent(i_frame_7a942063d3ba99f77b58515ba65be54e);
+            
+        
+
+        marker_79109ba85a3a0e6d13588a8bd189f8b8.bindPopup(popup_015b5a22bf0c079cc89fda89d6f15c91)
+        ;
+
+        
+    
+    
+            marker_79109ba85a3a0e6d13588a8bd189f8b8.bindTooltip(
+                `<div>
+                     达里加湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_628980baf799c6629dba27f32aefc333 = L.marker(
+                [29.99, 103.48],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_46b0ed8982f5e3379d0dd0ccb48321cf = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_6cd6e0e951523d7823ddbafd5a065522 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWNp+m+mea5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5Y2n6b6Z5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMDMuNDjluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjkuOTnluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC4x5bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8muS6mueDreW4puWto+mjjuawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_46b0ed8982f5e3379d0dd0ccb48321cf.setContent(i_frame_6cd6e0e951523d7823ddbafd5a065522);
+            
+        
+
+        marker_628980baf799c6629dba27f32aefc333.bindPopup(popup_46b0ed8982f5e3379d0dd0ccb48321cf)
+        ;
+
+        
+    
+    
+            marker_628980baf799c6629dba27f32aefc333.bindTooltip(
+                `<div>
+                     卧龙湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c5350ce663e70781277b98892c10ea5 = L.marker(
+                [41.68, 127.92],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_81a7689f50ee89cd8e341786fd5e71fa = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_cc4bdc7d6341543e65bce37059b37573 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumVv+eZveWxseWkqeaxoDwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6ZW/55m95bGx5aSp5rGgPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMjcuOTLluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNDEuNjjluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaOS4wNeW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrlr5LmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_81a7689f50ee89cd8e341786fd5e71fa.setContent(i_frame_cc4bdc7d6341543e65bce37059b37573);
+            
+        
+
+        marker_2c5350ce663e70781277b98892c10ea5.bindPopup(popup_81a7689f50ee89cd8e341786fd5e71fa)
+        ;
+
+        
+    
+    
+            marker_2c5350ce663e70781277b98892c10ea5.bindTooltip(
+                `<div>
+                     长白山天池
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53e04f1e7fcecdfd7fdb8457147aca24 = L.marker(
+                [44.13, 104.52],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_a7388637390f990f1102fecf9fc80fd5 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_affd01cfe53dfc98c7001b33ec2d0ea0 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuafpeW5sua5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5p+l5bmy5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMDQuNTLluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNDQuMTPluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC43M+W5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrlr5LmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_a7388637390f990f1102fecf9fc80fd5.setContent(i_frame_affd01cfe53dfc98c7001b33ec2d0ea0);
+            
+        
+
+        marker_53e04f1e7fcecdfd7fdb8457147aca24.bindPopup(popup_a7388637390f990f1102fecf9fc80fd5)
+        ;
+
+        
+    
+    
+            marker_53e04f1e7fcecdfd7fdb8457147aca24.bindTooltip(
+                `<div>
+                     查干湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d9fdfb38453f42d812890b4e3b21dc86 = L.marker(
+                [40.94, 115.79],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_2f38f8593320549663eddeba34bc6852 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_3f49097c43adf9b57af964ba2216e85e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPumbgem4o+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+6ZuB6bij5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMTUuNznluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaNDAuOTTluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMS42NOW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrmuKnluKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_2f38f8593320549663eddeba34bc6852.setContent(i_frame_3f49097c43adf9b57af964ba2216e85e);
+            
+        
+
+        marker_d9fdfb38453f42d812890b4e3b21dc86.bindPopup(popup_2f38f8593320549663eddeba34bc6852)
+        ;
+
+        
+    
+    
+            marker_d9fdfb38453f42d812890b4e3b21dc86.bindTooltip(
+                `<div>
+                     雁鸣湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c85fef0c88728c53b79ed08f2f424286 = L.marker(
+                [21.92, 108.44],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_f62fbbd105dc4f4c8c208d6ce72ef4e5 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_503d2f708fa2e259aaf4118d4332e5e8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWNl+S4vea5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5Y2X5Li95rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJoxMDguNDTluqY8L3A+CiAgICAgICAgPHA+57qs5bqm77yaMjEuOTLluqY8L3A+CiAgICAgICAgPHA+6Z2i56ev77yaMC4xMuW5s+aWueWFrOmHjDwvcD4KICAgICAgICA8cD7msJTlgJnvvJrkuprng63luKblraPpo47msJTlgJk8L3A+CiAgICAKICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIA==" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_f62fbbd105dc4f4c8c208d6ce72ef4e5.setContent(i_frame_503d2f708fa2e259aaf4118d4332e5e8);
+            
+        
+
+        marker_c85fef0c88728c53b79ed08f2f424286.bindPopup(popup_f62fbbd105dc4f4c8c208d6ce72ef4e5)
+        ;
+
+        
+    
+    
+            marker_c85fef0c88728c53b79ed08f2f424286.bindTooltip(
+                `<div>
+                     南丽湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e30ab8da73b83c4806904ac40674c63 = L.marker(
+                [31.57, 80.09],
+                {}
+            ).addTo(marker_cluster_7cc8fa43a3c97c009a60fd0923f3b6e6);
+        
+    
+        var popup_49242a1c5ac1def40835ec17f6347f4e = L.popup({"maxWidth": 2650});
+
+        
+            
+                var i_frame_bad9e33b7b5b59063ad70a757459bf31 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxodG1sPgogICAgPGhlYWQ+CiAgICAgICAgPHRpdGxlPuWWgOaWr+mCo+a5ljwvdGl0bGU+CiAgICA8L2hlYWQ+CiAgICA8Ym9keT4KICAgICAgICA8aDE+5ZaA5pav6YKj5rmWPC9oMT4KICAgICAgICA8cD7nu4/luqbvvJo4MC4wOeW6pjwvcD4KICAgICAgICA8cD7nuqzluqbvvJozMS41N+W6pjwvcD4KICAgICAgICA8cD7pnaLnp6/vvJoxLjgy5bmz5pa55YWs6YeMPC9wPgogICAgICAgIDxwPuawlOWAme+8mua4qeW4puWto+mjjuawlOWAmTwvcD4KICAgIAogICAgPC9ib2R5PgogICAgPC9odG1sPgogICAg" width="480" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_49242a1c5ac1def40835ec17f6347f4e.setContent(i_frame_bad9e33b7b5b59063ad70a757459bf31);
+            
+        
+
+        marker_1e30ab8da73b83c4806904ac40674c63.bindPopup(popup_49242a1c5ac1def40835ec17f6347f4e)
+        ;
+
+        
+    
+    
+            marker_1e30ab8da73b83c4806904ac40674c63.bindTooltip(
+                `<div>
+                     喀斯那湖
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
