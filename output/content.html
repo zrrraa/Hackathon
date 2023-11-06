@@ -13,62 +13,9 @@
             background-attachment: fixed; /* 固定背景，以便滚动内容而不是背景 */
             color: white; /* 设置字体颜色为白色 */
         }
-
-        #calculateButton {
-            margin-top: 10px; /* 增加与上面内容的垂直间距 */
-            padding: 10px 20px; /* 增大按钮的尺寸 */
-        }
     </style>
 </head>
 <body>
     <h1 id="lake_name">中国湖泊</h1>
-
-    <!-- 输入框用于3x3表格 -->
-    <h2>计算环境容纳量</h2>
-    <table style="margin: 0 auto;">
-        <tr>
-            <th></th>
-            <th>大鱼生物量</th>
-            <th>小鱼生物量</th>
-        </tr>
-        <tr>
-            <th>第一年</th>
-            <td><input type="text" id="row2col2" style="height: 30px;"></td>
-            <td><input type="text" id="row2col3" style="height: 30px;"></td>
-        </tr>
-        <tr>
-            <th>第二年</th>
-            <td><input type="text" id="row3col2" style="height: 30px;"></td>
-            <td><input type="text" id="row3col3" style="height: 30px;"></td>
-        </tr>
-    </table>
-
-    <!-- 计算按钮 -->
-    <button id="calculateButton">计算</button>
-
-    <!-- 增加间距 -->
-    <br>
-
-    <!-- 标签框用于显示总和 -->
-    <p id="sum" style="display: none;">等待计算结果...</p>
-
-    <!-- JavaScript 用于计算总和 -->
-    <script>
-        const inputElements = document.querySelectorAll("input:not([type='text'][id='row2col1'], [type='text'][id='row3col1'], [type='text'][id='row1col2'], [type='text'][id='row1col3'])");
-        const sumElement = document.getElementById("sum");
-        const calculateButton = document.getElementById("calculateButton");
-
-        calculateButton.addEventListener("click", calculateSum);
-
-        function calculateSum() {
-            let total = 0;
-            inputElements.forEach((inputElement) => {
-                const inputValue = parseFloat(inputElement.value) || 0;
-                total += inputValue;
-            });
-            sumElement.textContent = "环境容纳量：" + total;
-            sumElement.style.display = "block";
-        }
-    </script>
 </body>
 </html>
