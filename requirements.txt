@@ -1,0 +1,5 @@
+Cartopy==0.22.0
+folium==0.14.0
+geopandas==0.14.0
+matplotlib==3.8.0
+mplcursors==0.5.2

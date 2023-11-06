@@ -1,7 +1,3 @@
-import folium
-from folium.plugins import MarkerCluster
-
-
 # 湖泊位置和基本信息数据
 lake_data = {
     "巢湖": {
@@ -91,12 +87,6 @@ lake_data = {
         "climate": "高原季风气候",
         "more": "F:\Hackathon\data\lake_moreabout\peikucuo.html"
     },
-    "青海湖": {
-        "lake_name": "青海湖",
-        "location": (99.94, 36.73),
-        "area": "4,317",
-        "climate": "高原季风气候"
-    },
     "千岛湖": {
         "lake_name": "千岛湖",
         "location": (118.93, 29.56),
@@ -145,7 +135,6 @@ lake_data = {
         "area": "2",
         "climate": "亚热带季风气候"
     },
-    # 新湖泊信息
     "呼伦湖": {
         "lake_name": "呼伦湖",
         "location": (119.66, 49.11),
@@ -230,65 +219,47 @@ lake_data = {
         "area": "1.82",
         "climate": "温带季风气候"
     },
+    "清潩河武昌段": {
+        "lake_name": "清潩河武昌段",
+        "location": (114.27, 30.56),
+        "area": "待提供",
+        "climate": "亚热带季风气候"
+    },
+    "洈水水库": {
+        "lake_name": "洈水水库",
+        "location": (119.27, 31.47),
+        "area": "待提供",
+        "climate": "温带季风气候"
+    },
+    "白洋淀": {
+        "lake_name": "白洋淀",
+        "location": (115.40, 39.51),
+        "area": "待提供",
+        "climate": "温带季风气候"
+    },
+    "珠江口": {
+        "lake_name": "珠江口",
+        "location": (113.27, 22.59),
+        "area": "400",
+        "climate": "热带季风气候"
+    },
+    "胶州湾": {
+        "lake_name": "胶州湾",
+        "location": (120.00, 36.15),
+        "area": "343.1",
+        "climate": "温带季风气候"
+    },
+    "滆湖": {
+        "lake_name": "滆湖",
+        "location": (115.45, 38.40),
+        "area": "164",
+        "climate": "温带大陆性季风气候"
+    },
+    "五里湖": {
+        "lake_name": "五里湖",
+        "location": (116.30, 40.05),
+        "area": "8.4",
+        "climate": "温带季风气候"
+    },
     # 继续添加更多湖泊信息...
 }
-
-# 创建地图
-
-m = folium.Map([35.0, 105.0],
-  tiles= 'https://webst02.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}',
-  attr='高德-卫星影像图',
-  zoom_start=5,
-  )
-
-# m = folium.Map([35.0, 105.0],
-#     tiles='http://thematic.geoq.cn/arcgis/rest/services/ThematicMaps/WorldHydroMap/MapServer/tile/{z}/{y}/{x}',
-#     attr='水系专题',
-#     zoom_start=5,
-#     )
-
-# 创建标记聚类
-marker_cluster = MarkerCluster()
-
-# 添加湖泊标记及面积和气候信息
-for lake_name, info in lake_data.items():
-    lon, lat = info["location"]
-    area = info["area"]
-    climate = info["climate"]
-
-    # 创建自定义HTML内容
-    html_content = f"""
-    <html>
-    <head>
-        <title>{lake_name}</title>
-    </head>
-    <body>
-        <h1>{lake_name}</h1>
-        <p>经度：{lon}度</p>
-        <p>纬度：{lat}度</p>
-        <p>面积：{area}平方公里</p>
-        <p>气候：{climate}</p>
-    """
-
-    # 如果湖泊信息中有more信息，添加链接到另一个HTML页面
-    if "more" in info:
-        more_info_src = info["more"]
-        html_content += f'<br><a href="{more_info_src}" target="_blank">更多信息</a>'
-
-    html_content += """
-    </body>
-    </html>
-    """
-
-    iframe = folium.IFrame(html=html_content, width=480, height=300)
-    popup = folium.Popup(iframe, max_width=2650)
-
-    marker = folium.Marker([lat, lon], popup=popup)
-    marker_cluster.add_child(marker)
-    folium.Tooltip(lake_name).add_to(marker)
-
-# 将标记聚类添加到地图
-m.add_child(marker_cluster)
-
-# 显示地图
-m.save("output/china_lake_map.html")
