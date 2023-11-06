@@ -256,7 +256,7 @@ lake_data = {
         "province": "浙江",
         "K_value": 0,
         "state": "暂无数据",
-        "money": 0,
+        "money": 16.3688697,
         "capacity": 0
     },
     "贝尔湖": {
@@ -490,7 +490,6 @@ for lake_name, info in lake_data.items():
     state = info["state"]
     province = info["province"]
     money = info["money"]
-    K_value = info["K_value"]
 
     # 创建自定义HTML内容
     html_content = f"""
@@ -569,17 +568,21 @@ for lake_name, info in lake_data.items():
             </form>
         </div>
         
+        <p id="result">K-value</p>
         <div id="output-value"></div>
         <script>
             var stateMessage = "";
             var value = 0;
+            var K = 0;
             // JavaScript function to calculate the value
             function calculate_fishstate(year, biomass1, biomass2) {{
                 // 计算
                 var growth = biomass2 - biomass1;
                 var intrinsic_growth_rate = 0.53;
                 var biomass_v = biomass1;
-                var K = intrinsic_growth_rate * Math.pow(biomass_v, 2) / (intrinsic_growth_rate * biomass_v - growth);
+                K = intrinsic_growth_rate * Math.pow(biomass_v, 2) / (intrinsic_growth_rate * biomass_v - growth);
+                var resultElement = document.getElementById("result");
+                resultElement.textContent = "K-value = " + K; // 更新变量的值
                 var biomass0 = biomass1;
 
                 if (biomass2 >= K / 2) {{
@@ -626,7 +629,7 @@ for lake_name, info in lake_data.items():
 
             function adjust_fishstate(year, biomass) {{
                 // var K = 13696000; // 此处需要从信息卡中提取K值
-                var K = parseFloat({ K_value }); // Pass the value of K from the backend
+                
                 var intrinsic_growth_rate = 0.53;
 
                 if (biomass >= K / 2) {{
@@ -652,7 +655,7 @@ for lake_name, info in lake_data.items():
                 if (value === 0) {{
                     outputElement.innerHTML = "当前状态：可捕捞";
                 }} else if (value !== null) {{
-                    outputElement.innerHTML = "当前状态：" + String(value) + "年后可捕捞";
+                    outputElement.innerHTML = "当前状态：" + value + "年后可捕捞";
                 }} else {{
                     outputElement.innerHTML = "当前状态：禁渔中";
                 }}
@@ -667,7 +670,7 @@ for lake_name, info in lake_data.items():
                 var money = parseFloat({ money }); // Pass the value of money from the backend
                 var outputElement = document.getElementById("output-value");
                 if (value[0] === 0) {{
-                    outputElement.innerHTML = "当前状态：可捕捞";
+                    outputElement.innerHTML = "当前状态：可捕捞，经济收益为" + money * 0.53 * K / 2;
                 }} else if (value[0] === 1) {{
                     outputElement.innerHTML = "当前状态：" + value[1] + "年后可捕捞";
                 }} else if (value[0] === 2) {{
